@@ -1,4 +1,5 @@
 const User = require('../models/user')
+const bcrypt = require('bcryptjs')
 
 const resolvers = {
     Query: {
@@ -28,7 +29,9 @@ const resolvers = {
             if (foundUsername) throw new Error('Username in use')
             console.log(foundUsername)
 
-            //Encrypt password (TODO)
+            //Encrypt password
+            const salt = await bcrypt.genSaltSync(10);
+            newUser.password = await bcrypt.hash(password, salt);
 
             try {
                 //save user to database
