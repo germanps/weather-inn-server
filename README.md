@@ -4,6 +4,7 @@ Backend for data persistence of the weather-inn application.
 
 ## Content
 This proyect has two branches: master and develop. **master** contains the realise of the application and **develop** contains the test of the use cases.
+Database is hosted in MongoAtlas Cluster
 
 ## Demo
 If you want to see the demo of this proyect deployed, you can visit [Demo of the proyect](https://germanps.com/)
