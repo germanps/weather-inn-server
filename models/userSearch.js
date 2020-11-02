@@ -15,12 +15,12 @@ const UserSearchSchema = Schema({
     codprov: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
     },
     idpob: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
     },
 })
 

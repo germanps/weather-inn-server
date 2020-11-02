@@ -8,6 +8,7 @@ const resolvers = {
             console.log('Getting user')
             return null;
         },
+        getUserSearch: (_, { idUser }) => userSearchController.getUserSearch(idUser),
     },
 
     Mutation: {

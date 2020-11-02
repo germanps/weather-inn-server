@@ -18,6 +18,14 @@ function userSearch(input) {
     return null;
 }
 
+async function getUserSearch(idUser) {
+    console.log(idUser);
+    const search = await UserSearch.find({ idUser })
+    console.log(search)
+    return null;
+}
+
 module.exports = {
     userSearch,
+    getUserSearch,
 } 
