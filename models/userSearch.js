@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const UserSearchSchema = Schema({
     idUser: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         require: true,
         ref: "User"
     },

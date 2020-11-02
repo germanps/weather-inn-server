@@ -15,7 +15,7 @@ const typeDefs = gql`
 
     type Search {
         id: ID
-        idUser: User
+        idUser: ID
         label: String
         codprov: String
         idpob: String
@@ -33,6 +33,7 @@ const typeDefs = gql`
     }
 
     input UserSearchInput {
+        idUser: String
         label: String
         codprov: String
         idpob: String
