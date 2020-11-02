@@ -12,12 +12,12 @@ const UserSearchSchema = Schema({
         required: true,
         unique: true,
     },
-    codprop: {
+    codprov: {
         type: String,
         required: true,
         unique: true,
     },
-    idprob: {
+    idpob: {
         type: String,
         required: true,
         unique: true,
