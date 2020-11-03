@@ -25,9 +25,9 @@ function server() {
         resolvers,
     });
 
-    serverApollo.listen().then(({ url }) => {
+    serverApollo.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
         console.log("#####################################################");
         console.log(`Servidor funcionando en la url ${url}`);
         console.log("#####################################################");
-    })
+    });
 }

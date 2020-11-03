@@ -13,6 +13,14 @@ const typeDefs = gql`
         token: String
     }
 
+    type Search {
+        id: ID
+        idUser: ID
+        label: String
+        codprov: String
+        idpob: String
+    }
+
     input UserInput {
         name: String!
         username: String!
@@ -24,15 +32,24 @@ const typeDefs = gql`
         password: String!
     }
 
+    input UserSearchInput {
+        idUser: String
+        label: String
+        codprov: String
+        idpob: String
+    }
+
     type Query {
         # User
         getUser: User
+        getUserSearch(idUser: ID!): [Search]
     }
 
     type Mutation {
         # User
         register(input: UserInput): User
         login(input: LoginInput): Token
+        userSearch(input: UserSearchInput): Search
     }
 `;
 
