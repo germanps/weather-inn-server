@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "spa weather server",
   "main": "index.js",
-  "repository": "https://github.com/germanps/weather-inn-server",
   "author": "German Pla",
   "license": "MIT",
   "scripts": {
