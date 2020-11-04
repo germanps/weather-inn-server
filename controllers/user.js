@@ -58,7 +58,30 @@ async function register(input) {
     }
 }
 
+async function updateUser(input) {
+    const { idUser } = input
+    const newUser = input
+    try {
+        const userFound = await User.findById(idUser);
+        const passwordSuccess = await bcrypt.compare(
+            input.currentPassword,
+            userFound.password
+        )
+        if (!passwordSuccess) throw new Error('Error password')
+        const salt = await bcrypt.genSaltSync(10);
+        const newPasswordCrypt = await bcrypt.hash(input.newPassword, salt)
+        newUser.password = newPasswordCrypt
+        newUser.email = input.email
+        await User.findByIdAndUpdate(idUser, newUser)
+        return true
+    } catch (error) {
+        console.log(error);
+        return false
+    }
+}
+
 module.exports = {
     register,
     login,
+    updateUser,
 };

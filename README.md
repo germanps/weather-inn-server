@@ -1,6 +1,6 @@
 # README.MD
 Here you'll find... 
-Backend for data persistence of the weather-inn application.
+Backend for data persistence of the weather-inn application. This Backend is develop in Apollo GraphQL
 
 ## Content
 This proyect has two branches: master and develop. **master** contains the realise of the application and **develop** contains the test of the use cases.
