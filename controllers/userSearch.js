@@ -1,4 +1,3 @@
-const comment = require('../../../GraphQL/instaclone/server/models/comment');
 const UserSearch = require('../models/userSearch')
 
 function userSearch(input) {
