@@ -39,6 +39,13 @@ const typeDefs = gql`
         idpob: String
     }
 
+    input UserUpdateInput {
+        idUser: String
+        email: String
+        currentPassword: String
+        newPassword: String
+    }
+
     type Query {
         # User
         getUser: User
@@ -50,6 +57,7 @@ const typeDefs = gql`
         register(input: UserInput): User
         login(input: LoginInput): Token
         userSearch(input: UserSearchInput): Search
+        updateUser(input: UserUpdateInput): Boolean
     }
 `;
 

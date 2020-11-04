@@ -16,6 +16,7 @@ const resolvers = {
         register: (_, { input }) => userController.register(input),
         login: (_, { input }) => userController.login(input),
         userSearch: (_, { input }) => userSearchController.userSearch(input),
+        updateUser: (_, { input }) => userController.updateUser(input),
     }
 }
 
